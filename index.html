@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="study-materials.html">Study Materials</a></li>
+            </ul>
+        </nav>
+        <h1>Interactive Quiz</h1>
+    </header>
+
+    <main>
+        <div id="quiz-container">
+            <!-- Timer Display -->
+            <div id="timer">
+                <p>Time Remaining: <span id="time">10:00</span> minutes</p>
+            </div>
+
+            <div id="quiz">
+                <p id="question"></p>
+                <div id="answers"></div>
+            </div>
+        </div>
+
+        <div id="score-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Congratulations!</h2>
+                <p>You scored <span id="modal-score"></span> points!</p>
+                <button onclick="restartQuiz()">Restart Quiz</button>
+            </div>
+            <div class="burst"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 Interactive Quiz Page</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
