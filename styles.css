@@ -1,0 +1,223 @@
+/* Reset some default styles */
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#quiz-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: inline-block;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#answers button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#answers button:hover {
+    background-color: #ddd;
+}
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding-top: 60px; 
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.burst-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.burst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.6), rgba(255, 255, 0, 0.6), rgba(0, 255, 0, 0.6), rgba(0, 0, 255, 0.6));
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+    animation: burst 1.5s forwards;
+}
+
+@keyframes burst {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(3);
+    }
+}
+
+.modal-content h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #4CAF50;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+/* Footer styles */
+footer {
+    background: #4CAF50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Social media icons */
+.social-media {
+    margin: 10px 0;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+#timer {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#time {
+    font-weight: bold;
+    color: #FF6347; /* Tomato color for emphasis */
+}
